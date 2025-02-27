@@ -9,7 +9,9 @@ function Navbar() {
       <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#">Contact</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
       </div>
       <div className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
         ☰
@@ -58,6 +60,49 @@ function Services() {
   );
 }
 
+function Testimonials() {
+  return (
+    <section id="testimonials" className="testimonials">
+      <h2>What Our Clients Say</h2>
+      <div className="testimonial-list">
+        <div className="testimonial-item">
+          <p>"This company transformed my business! Highly recommend."</p>
+          <h4>- Jane Doe</h4>
+        </div>
+        <div className="testimonial-item">
+          <p>"Excellent service and professional work. 10/10!"</p>
+          <h4>- John Smith</h4>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FAQ() {
+  return (
+    <section id="faq" className="faq">
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>What services do you offer?</summary>
+        <p>We offer web development, graphic design, and SEO optimization.</p>
+      </details>
+      <details>
+        <summary>How can I contact you?</summary>
+        <p>You can contact us through our email or phone number listed in the footer.</p>
+      </details>
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer id="contact" className="footer">
+      <p>&copy; 2025 My Company. All rights reserved.</p>
+      <p>Contact us at: support@mycompany.com</p>
+    </footer>
+  );
+}
+
 function App() {
   return (
     <div>
@@ -65,6 +110,9 @@ function App() {
       <Hero />
       <About />
       <Services />
+      <Testimonials />
+      <FAQ />
+      <Footer />
     </div>
   );
 }
