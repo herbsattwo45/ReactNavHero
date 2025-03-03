@@ -1,17 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Navbar and Hero</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="root"></div>
+    <nav class="navbar">
+        <h2 class="logo">MyWebsite</h2>
+        <div class="nav-links" id="navLinks">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+    </nav>
 
-  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script type="text/babel" src="app.js"></script>
+    <section id="hero" class="hero">
+        <h1>Welcome to Our Website</h1>
+        <p>Your success is our priority</p>
+    </section>
+
+    <section id="about" class="about">
+        <img src="about-image.jpg" alt="About Us" class="about-img">
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>We provide top-notch services to help you succeed.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <p>Providing quality solutions tailored to your needs.</p>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>Testimonials</h2>
+        <p>Our customers love us!</p>
+    </section>
+
+    <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <p>Find answers to common questions here.</p>
+    </section>
+
+    <footer id="contact" class="footer">
+        <h2>Contact Us</h2>
+        <p>Email: info@mywebsite.com</p>
+        <p>Phone: +27 63 987 3440</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <footer id="contact" class="footer">
+      <h2>Contact Us</h2>
+      <p>Email: info@mywebsite.com</p>
+      <p>Phone: ++27 63 987 3440</p>
+      <p>&copy; 2025 MyWebsite. All Rights Reserved.</p>
+  </footer>
+  
 </body>
+
 </html>

@@ -1,57 +1,74 @@
-.about, .services, .testimonials, .faq, .footer {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-  }
-  
-  .about h2, .services h2, .testimonials h2, .faq h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  .service-list, .testimonial-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .service-item, .testimonial-item {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-  }
-  
-  .service-item h3, .testimonial-item h4 {
-    margin-bottom: 10px;
-  }
-  
-  .faq details {
-    background: white;
-    padding: 10px;
-    margin: 10px auto;
-    max-width: 600px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .faq summary {
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .footer {
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 15px 20px;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
     background: #333;
-    color: white;
-    padding: 20px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    padding: 10px;
   }
-  
-  @media (max-width: 768px) {
-    .service-list, .testimonial-list {
-      flex-direction: column;
-      align-items: center;
-    }
+  .nav-links.active {
+    display: flex;
   }
-  
+  .menu-button {
+    display: block;
+  }
+}
+
+/* Sections */
+.hero, .about, .services, .testimonials, .faq, .footer {
+  padding: 50px 20px;
+}
+
+.about-img {
+  width: 300px;
+  border-radius: 10px;
+}
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
